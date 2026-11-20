@@ -688,7 +688,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .sw.dot{width:11px;height:11px;border-radius:50%;border:2px solid #5A6066;background:rgba(58,110,165,.55)}
   .legend{font-size:12.5px;color:var(--muted);margin:10px 0 0}
   .ramp{display:flex;align-items:center;gap:8px;margin:8px 0 0;font-size:12px;color:var(--muted)}
-  .ramp i{flex:1;height:10px;border-radius:5px;max-width:260px;background:linear-gradient(90deg,#C4DAD0,#D5E5BE 8%,#E4E6B0 20%,#EBD9A0 40%,#D9B77E 60%,#BF9467 80%,#8C6A58)}
+  .ramp i{flex:1;height:10px;border-radius:5px;max-width:260px;background:linear-gradient(90deg,#78AA96,#96C88C 8%,#CDE082 20%,#F0D778 40%,#DEA555 60%,#B9733C 80%,#5F3728)}
   .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
   .kpi{border-top:2px solid var(--terra);padding-top:6px}
   .kpi b{display:block;font-family:'Barlow','Source Sans 3',sans-serif;font-weight:400;font-size:28px;line-height:1.1}
@@ -729,7 +729,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .tg-foot{max-width:none;margin:36px 0 0;padding:28px 18px 34px;background:#141516;border-top:2px solid #5A6066;text-align:center;font:14px 'Source Sans 3',system-ui,sans-serif;color:#B8BEC4}
 .tg-foot p{margin:4px 0}.tg-foot a{color:#F5F6F7;font-weight:700;text-decoration-color:#9AD0EC}.tg-foot a:hover{color:#9AD0EC}
 </style>
-<style>.seg{flex-wrap:wrap;max-width:100%}.seg button{letter-spacing:.02em;font-size:12.5px;padding:7px 11px}*:not([style*="50%"]):not(.dot):not(.sw.dot):not(.np){border-radius:0!important}button,.btn{text-transform:uppercase;letter-spacing:.04em;font-weight:700;transition:background .15s,border-color .15s,color .15s,transform .15s}button:hover,.btn:hover{border-color:#9AD0EC}.btn.p,.btn.s{border:1px solid #F5F6F7}.btn.p:hover{background:#9AD0EC;color:#141516;transform:none}.btn.s{background:transparent;color:#F5F6F7}.btn.s:hover{background:#F5F6F7;color:#141516;transform:none}a.card{transition:border-color .15s,transform .15s,box-shadow .15s}a.card:hover{border-color:#9AD0EC;transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.55)}input[type=checkbox],input[type=range]{accent-color:#9AD0EC}h1,h2,h3,.stat b,.card h3,.game b,.kpi b{font-family:"Barlow","Source Sans 3",sans-serif!important;font-weight:700!important;letter-spacing:0}h1{text-transform:uppercase;letter-spacing:.01em}</style>
+<style>#tip{background:#0E0F10!important;color:#F5F6F7!important;border:1px solid #9AD0EC;box-shadow:0 8px 28px rgba(0,0,0,.65)!important}#tip b{color:#fff;font-weight:700!important}#tip .d{color:#B8BEC4}.seg{flex-wrap:wrap;max-width:100%}.seg button{letter-spacing:.02em;font-size:12.5px;padding:7px 11px}*:not([style*="50%"]):not(.dot):not(.sw.dot):not(.np){border-radius:0!important}button,.btn{text-transform:uppercase;letter-spacing:.04em;font-weight:700;transition:background .15s,border-color .15s,color .15s,transform .15s}button:hover,.btn:hover{border-color:#9AD0EC}.btn.p,.btn.s{border:1px solid #F5F6F7}.btn.p:hover{background:#9AD0EC;color:#141516;transform:none}.btn.s{background:transparent;color:#F5F6F7}.btn.s:hover{background:#F5F6F7;color:#141516;transform:none}a.card{transition:border-color .15s,transform .15s,box-shadow .15s}a.card:hover{border-color:#9AD0EC;transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.55)}input[type=checkbox],input[type=range]{accent-color:#9AD0EC}h1,h2,h3,.stat b,.card h3,.game b,.kpi b{font-family:"Barlow","Source Sans 3",sans-serif!important;font-weight:700!important;letter-spacing:0}h1{text-transform:uppercase;letter-spacing:.01em}</style>
 </head>
 <body>
 <header class="tg-top"><a class="tg-brand" href="index.html">GeoTunisia</a><nav aria-label="Cartes"><a href="index.html">Accueil</a><a href="demographie.html">Démographie</a><a href="economie.html">Économie</a><a href="climat-eau.html">Climat et eau</a><a href="relief-cours-eau-barrages.html" aria-current="page">Relief et cours d’eau</a><a href="agriculture-forets-elevage.html">Agriculture et forêts</a></nav></header>
@@ -744,8 +744,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
         <label class="chk"><input type="checkbox" data-l="alt" checked> Altitudes en couleur</label>
         <label class="chk"><input type="checkbox" data-l="dyn" checked> Échelle adaptée à la vue</label>
         <label class="chk"><input type="checkbox" data-l="gov" checked> Gouvernorats</label>
-        <label class="chk"><input type="checkbox" data-l="P" checked><span class="sw" style="border-color:#1F5FA8"></span> Permanents (Medjerda et affluents retenus)</label>
-        <label class="chk"><input type="checkbox" data-l="i" checked><span class="sw dash" style="border-color:#C65D3B"></span> Intermittents (cas général)</label>
+        <label class="chk"><input type="checkbox" data-l="P" checked><span class="sw" style="border-color:#1565D8"></span> Permanents (Medjerda et affluents retenus)</label>
+        <label class="chk"><input type="checkbox" data-l="i" checked><span class="sw dash" style="border-color:#8A3A12"></span> Intermittents (cas général)</label>
         <label class="chk"><input type="checkbox" data-l="c" checked><span class="sw" style="border-color:#2A8C82"></span> Canaux</label>
         <label class="chk"><input type="checkbox" data-l="dams" checked><span class="sw dot"></span> Barrages</label>
       </div>
@@ -787,11 +787,11 @@ const fmt=(n,d=0)=>n.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFrac
 const REGC={Nord:'#3A6EA5',Centre:'#C65D3B','Cap-Bon':'#2A8C82'};
 const CLS={P:'Permanent (oued retenu dans la liste des cours d’eau permanents)',i:'Intermittent (cas général)',c:'Canal (ouvrage artificiel)'};
 const OSMI={y:'intermittent',n:'non intermittent','-':'non renseignée'};
-const COL={P:'#1F5FA8',i:'#C65D3B',c:'#2A8C82'};
+const COL={P:'#1565D8',i:'#8A3A12',c:'#00897B'};
 const WT=['rivière (river)','ruisseau (stream)','oued (wadi)','canal'];
 const DEM=window.__DEM||'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
 // décodage des tracés (entiers en 1e-4°, premier point absolu puis écarts) -> [lat,lng]
-const lines=D.rivers.map(r=>{const d=r[4],c=[];let x=d[0],y=d[1];c.push([y/1e4,x/1e4]);for(let i=2;i<d.length;i+=2){x+=d[i];y+=d[i+1];c.push([y/1e4,x/1e4])}return{t:r[0],z:r[1],n:r[2],a:r[3],o:r[5],c}});
+D.rivers.forEach(r=>{if(r[2]==='Oued Miliane')r[0]='P'});D.geo.km.P+=84;D.geo.km.i-=84;const lines=D.rivers.map(r=>{const d=r[4],c=[];let x=d[0],y=d[1];c.push([y/1e4,x/1e4]);for(let i=2;i<d.length;i+=2){x+=d[i];y+=d[i+1];c.push([y/1e4,x/1e4])}return{t:r[0],z:r[1],n:r[2],a:r[3],o:r[5],c}});
 const map=L.map('map',{zoomSnap:.25,zoomDelta:.5,minZoom:5,maxZoom:12,zoomControl:true,attributionControl:true,preferCanvas:false});
 map.attributionControl.setPrefix(false);
 map.attributionControl.addAttribution('Relief : AWS Terrain Tiles (Mapzen ; SRTM et autres sources) · Cours d’eau : © contributeurs OpenStreetMap (ODbL) · Barrages : ONAGRI · Leaflet');
@@ -799,7 +799,7 @@ L.control.scale({imperial:false}).addTo(map);
 map.fitBounds([[30.3,7.9],[37.5,11.7]],{padding:[10,10]});
 ['mask','gov','riv','dams','pts'].forEach((n,i)=>{map.createPane(n);map.getPane(n).style.zIndex=410+i*10;map.getPane(n).style.pointerEvents=n==='mask'||n==='gov'?'none':''});
 // ---------- relief calculé dans le navigateur (aucun worker, aucun WebGL) ----------
-const STOPS=[[-30,[196,218,208]],[0,[213,229,190]],[100,[228,230,176]],[300,[235,217,160]],[600,[217,183,126]],[900,[191,148,103]],[1200,[166,122,90]],[1550,[140,106,88]]];
+const STOPS=[[-30,[120,170,150]],[0,[150,200,140]],[100,[205,224,130]],[300,[240,215,120]],[600,[222,165,85]],[900,[185,115,60]],[1200,[140,80,50]],[1550,[95,55,40]]];
 function tint(e){if(e<=STOPS[0][0])return STOPS[0][1];for(let i=1;i<STOPS.length;i++){if(e<=STOPS[i][0]){const a=STOPS[i-1],b=STOPS[i],f=(e-a[0])/(b[0]-a[0]);return[a[1][0]+(b[1][0]-a[1][0])*f,a[1][1]+(b[1][1]-a[1][1])*f,a[1][2]+(b[1][2]-a[1][2])*f]}}return STOPS[STOPS.length-1][1]}
 const LUT=[];for(let e=-30;e<=1550;e++)LUT.push(tint(e));
 const lut=e=>LUT[Math.max(0,Math.min(LUT.length-1,Math.round(e)+30))];
@@ -809,13 +809,13 @@ function loadElev(z,x,y){const k=z+'/'+x+'/'+y;if(cache.has(k))return cache.get(
  cache.set(k,p);if(cache.size>400)cache.delete(cache.keys().next().value);return p}
 const Relief=L.GridLayer.extend({redraw(){if(this._map){this._removeAllTiles();const z=this._clampZoom(Math.round(this._map.getZoom()));if(z!==this._tileZoom){this._tileZoom=z;this._updateLevels()}this._update()}return this},createTile(co,done){const c=document.createElement('canvas');c.width=c.height=256;const z=co.z,n=Math.pow(2,z);
  loadElev(z,co.x,co.y).then(E=>{const lat=Math.atan(Math.sinh(Math.PI-2*Math.PI*(co.y+.5)/n));const cs=156543.03*Math.cos(lat)/n; // m par pixel
-  c._E=E;const lo0=rng.lo,sp0=Math.max(1,rng.hi-rng.lo);const g=c.getContext('2d'),im=g.createImageData(256,256),o=im.data;const ex=1.6,az=315*Math.PI/180,zen=45*Math.PI/180,cz=Math.cos(zen),sz=Math.sin(zen);
+  c._E=E;const lo0=rng.lo,sp0=Math.max(1,rng.hi-rng.lo);const g=c.getContext('2d'),im=g.createImageData(256,256),o=im.data;const ex=2.8,az=315*Math.PI/180,zen=45*Math.PI/180,cz=Math.cos(zen),sz=Math.sin(zen);
   const at=(x,y)=>E[(y<0?0:y>255?255:y)*256+(x<0?0:x>255?255:x)];
   for(let y=0;y<256;y++)for(let x=0;x<256;x++){const e=E[y*256+x];let r=236,gc=230,b=214,k=1;
    if(opt.alt){const t=lut(opt.dyn?-30+(e-lo0)/sp0*1580:e);r=t[0];gc=t[1];b=t[2]}else{r=gc=b=232}
    if(opt.shade){const dzdx=((at(x+1,y-1)+2*at(x+1,y)+at(x+1,y+1))-(at(x-1,y-1)+2*at(x-1,y)+at(x-1,y+1)))/(8*cs)*ex,dzdy=((at(x-1,y+1)+2*at(x,y+1)+at(x+1,y+1))-(at(x-1,y-1)+2*at(x,y-1)+at(x+1,y-1)))/(8*cs)*ex;
     const sl=Math.atan(Math.hypot(dzdx,dzdy)),as=dzdx!==0||dzdy!==0?Math.atan2(dzdy,-dzdx):0;
-    let h=cz*Math.cos(sl)+sz*Math.sin(sl)*Math.cos(az-as);k=Math.max(.5,Math.min(1.3,h/.707))}
+    let h=cz*Math.cos(sl)+sz*Math.sin(sl)*Math.cos(az-as);k=Math.max(.3,Math.min(1.5,(h/.707-1)*1.6+1))}
    const i=(y*256+x)*4;o[i]=Math.min(255,r*k);o[i+1]=Math.min(255,gc*k);o[i+2]=Math.min(255,b*k);o[i+3]=255}
   g.putImageData(im,0,0);done(null,c)}).catch(e=>{if(++demErr>3)document.getElementById('err').style.display='block';done(e,c)});return c}});
 const relief=new Relief({tileSize:256,minZoom:0,maxZoom:12,updateWhenZooming:false,keepBuffer:1}).addTo(map);
@@ -847,7 +847,7 @@ map.on('mousemove',e=>{const tz=relief._tileZoom;if(tz==null)return;const p=map.
 // ---------- masque hors Tunisie, gouvernorats ----------
 const ring=a=>a.map(p=>[p[1],p[0]]);
 L.polygon(D.geo.mask.geometry.coordinates.map(ring),{pane:'mask',stroke:false,fillColor:'#1F2123',fillOpacity:.93,interactive:false}).addTo(map);
-const govL=L.layerGroup(D.geo.gov.map(f=>{const g=f.geometry;const polys=g.type==='Polygon'?[g.coordinates]:g.coordinates;return L.polyline(polys.flatMap(p=>p.map(ring)),{pane:'gov',color:'#F5F6F7',opacity:.55,weight:1,interactive:false})})).addTo(map);
+const govL=L.layerGroup(D.geo.gov.map(f=>{const g=f.geometry;const polys=g.type==='Polygon'?[g.coordinates]:g.coordinates;return L.polyline(polys.flatMap(p=>p.map(ring)),{pane:'gov',color:'#101820',opacity:.85,weight:1.4,interactive:false})})).addTo(map);
 // ---------- cours d'eau ----------
 const tip=document.getElementById('tip');
 function showTip(html,ev){tip.innerHTML=html;tip.style.opacity=1;const w=tip.offsetWidth,h=tip.offsetHeight;let x=ev.clientX+14,y=ev.clientY+14;if(x+w>innerWidth-6)x=ev.clientX-w-14;if(y+h>innerHeight-6)y=ev.clientY-h-14;tip.style.left=x+'px';tip.style.top=y+'px'}
@@ -855,15 +855,15 @@ const hide=()=>{tip.style.opacity=0};
 const rend=L.canvas({pane:'riv',tolerance:5});
 const ord={c:0,i:1,P:2};lines.sort((a,b)=>ord[a.t]-ord[b.t]);
 const on={P:true,i:true,c:true};const grp={};
-const WBASE={P:[1.8,3.2],i:[1,2.1],c:[1.1,2.4]};
+const WBASE={P:[2.6,4.4],i:[1.5,2.8],c:[1.7,3.1]};
 const wt=(t,z)=>{const k=Math.max(0,Math.min(1,(z-5)/5)),b=WBASE[t];return b[0]+(b[1]-b[0])*k};
-const pl=lines.map(l=>{const p=L.polyline(l.c,{renderer:rend,color:COL[l.t],weight:wt(l.t,5),opacity:.95,dashArray:l.t==='i'?'6 3':null,lineJoin:'round',lineCap:'round'});
- p.on('mousemove',e=>{const nm=l.n||l.a;showTip(`<b>${nm||'Cours d’eau sans nom'}</b>${l.n&&l.a?'<div class="d">'+l.a+'</div>':''}${CLS[l.t]}<div class="d">Type OpenStreetMap : ${WT[l.z]} · balise « intermittent » : ${OSMI[l.o]}</div>`,e.originalEvent)});p.on('mouseout',hide);return {p,l}});
-function refreshRiv(){const z=map.getZoom();pl.forEach(({p,l})=>{const vis=on[l.t]&&(l.z===0||z>=7);if(vis&&!map.hasLayer(p))p.addTo(map);else if(!vis&&map.hasLayer(p))map.removeLayer(p)})}
-function restyle(){const z=map.getZoom();pl.forEach(({p,l})=>p.setStyle({weight:wt(l.t,z)}))}
+const pl=lines.map(l=>{const hh=L.polyline(l.c,{renderer:rend,color:'#F5F6F7',weight:wt(l.t,5)+1.8,opacity:.5,interactive:false,lineJoin:'round',lineCap:'round'});const p=L.polyline(l.c,{renderer:rend,color:COL[l.t],weight:wt(l.t,5),opacity:.95,dashArray:l.t==='i'?'6 3':null,lineJoin:'round',lineCap:'round'});
+ p.on('mousemove',e=>{const nm=l.n||l.a;showTip(`<b>${nm||'Cours d’eau sans nom'}</b>${l.n&&l.a?'<div class="d">'+l.a+'</div>':''}${CLS[l.t]}<div class="d">Type OpenStreetMap : ${WT[l.z]} · balise « intermittent » : ${OSMI[l.o]}</div>`,e.originalEvent)});p.on('mouseout',hide);return {p,l,hh}});
+function refreshRiv(){const z=map.getZoom();pl.forEach(({p,l,hh})=>{const vis=on[l.t]&&(l.z===0||z>=7);if(vis&&!map.hasLayer(p)){hh.addTo(map);p.addTo(map)}else if(!vis&&map.hasLayer(p)){map.removeLayer(p);map.removeLayer(hh)}})}
+function restyle(){const z=map.getZoom();pl.forEach(({p,l,hh})=>{p.setStyle({weight:wt(l.t,z)});hh.setStyle({weight:wt(l.t,z)+1.8})})}
 // ---------- barrages ----------
 const damsL=L.layerGroup().addTo(map);const rad=(cap,z)=>Math.sqrt(cap)*(.32+(.7-.32)*Math.max(0,Math.min(1,(z-5)/5)));
-const dm=D.dams.filter(d=>d.ll).map(d=>{const m=L.circleMarker([d.ll[1],d.ll[0]],{pane:'dams',radius:rad(d.cap,5),color:'#F5F6F7',weight:1.2,fillColor:REGC[d.reg],fillOpacity:.62});
+const dm=D.dams.filter(d=>d.ll).map(d=>{const m=L.circleMarker([d.ll[1],d.ll[0]],{pane:'dams',radius:rad(d.cap,5),color:'#FFFFFF',weight:2,fillColor:REGC[d.reg],fillOpacity:.95});
  m.on('mousemove',e=>showTip(`<b>Barrage ${d.n}</b>Capacité estimée : <b style="display:inline;font-size:15px">${fmt(d.cap,d.cap<10?1:0)} Mm³</b><div class="d">Région : ${d.reg} · source ONAGRI (10 oct. 2025)</div>`,e.originalEvent));m.on('mouseout',hide);m.addTo(damsL);return{m,d}});
 map.on('zoomend',()=>{restyle();refreshRiv();dm.forEach(({m,d})=>m.setRadius(rad(d.cap,map.getZoom())))});
 restyle();refreshRiv();
@@ -878,7 +878,7 @@ const km=D.geo.km,tk=km.i+km.P+km.c;
 document.getElementById('kpis').innerHTML=[
  [fmt(D.rivers.length),'tronçons de cours d’eau dans le fichier OpenStreetMap'],
  [fmt(tk),'km de tronçons cumulés (somme des tracés, pas la longueur des fleuves)'],
- [fmt(km.P)+' km','de tronçons classés permanents (Medjerda, Mellègue, Tessa, Siliana, Sejnane, Ghazala de Jendouba) ; le reste est intermittent'],
+ [fmt(km.P)+' km','de tronçons classés permanents (Medjerda, Mellègue, Tessa, Siliana, Sejnane, Ghazala de Jendouba, Miliane) ; le reste est intermittent'],
  [fmt(D.dams.length),'barrages dans la liste ONAGRI utilisée · '+fmt(D.total,0)+' Mm³ de capacité estimée']
 ].map(k=>`<div class="kpi"><b>${k[0]}</b><small>${k[1]}</small></div>`).join('');
 const mx=Math.max(...D.dams.map(d=>d.cap));
