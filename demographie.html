@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--cream:#E4E5E7;--paper:#FBF8F1;--ink:#262626;--muted:#5E6266;--line:#E2D8C6;--terra:#C65D3B;--neg:#5B7C99}
+  :root{--cream:#1F2123;--paper:#2A2D30;--ink:#F5F6F7;--muted:#B8BEC4;--line:#5A6066;--terra:#9AD0EC;--neg:#5B7C99}
   *{box-sizing:border-box}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;line-height:1.45}
   .wrap{max-width:1120px;margin:0 auto;padding:20px 16px 28px}
@@ -18,13 +18,13 @@
   .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px}
   .mapcard{position:relative}
   svg{width:100%;height:auto;display:block;touch-action:manipulation}
-  .gov{stroke:#FBF8F1;stroke-width:1.2;stroke-linejoin:round;cursor:pointer;transition:filter .12s}
+  .gov{stroke:#2A2D30;stroke-width:1.2;stroke-linejoin:round;cursor:pointer;transition:filter .12s}
   .gov:hover,.gov.on{stroke:var(--ink);stroke-width:2;filter:brightness(1.04)}
-  .city{fill:var(--ink);fill-opacity:.82;stroke:#FBF8F1;stroke-width:1.6;cursor:pointer}
+  .city{fill:var(--ink);fill-opacity:.82;stroke:#2A2D30;stroke-width:1.6;cursor:pointer}
   .city:hover,.city.on{fill-opacity:1;stroke:#FFD9A0;stroke-width:2.5}
-  .lbl{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:#FBF8F1;stroke-width:3px;stroke-linejoin:round;pointer-events:none;font-weight:500}
+  .lbl{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:#2A2D30;stroke-width:3px;stroke-linejoin:round;pointer-events:none;font-weight:500}
   .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
-  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#34383C}
   .seg button{font:inherit;font-size:13.5px;border:0;background:transparent;padding:7px 14px;cursor:pointer;color:var(--ink)}
   .seg button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
   label.chk{font-size:13.5px;display:inline-flex;gap:6px;align-items:center;cursor:pointer;color:var(--ink)}
@@ -39,13 +39,13 @@
   .kpi small{color:var(--muted);font-size:12.5px}
   .facts{margin:10px 0 0;padding:0;list-style:none;font-size:14px}
   .facts li{padding:6px 0;border-top:1px solid var(--line)}
-  #tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:#FBF8F1;border-radius:10px;padding:10px 12px;font-size:13px;max-width:290px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .08s}
+  #tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:#2A2D30;border-radius:10px;padding:10px 12px;font-size:13px;max-width:290px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .08s}
   #tip h3{margin:0 0 4px;font-family:'Barlow','Source Sans 3',sans-serif;font-weight:400;font-size:20px;line-height:1.1}
   #tip table{border-collapse:collapse;width:100%}
   #tip td{padding:2px 0;vertical-align:top}
   #tip td:last-child{text-align:right;font-weight:700;padding-left:12px;white-space:nowrap}
-  #tip .d{color:#C9BEAE;font-weight:400;font-size:11.5px}
-  #tip .n{margin-top:5px;color:#C9BEAE;font-size:11.5px}
+  #tip .d{color:#6A7077;font-weight:400;font-size:11.5px}
+  #tip .n{margin-top:5px;color:#6A7077;font-size:11.5px}
   details{margin-top:14px}
   summary{cursor:pointer;font-weight:700;font-size:14px}
   table.t{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
@@ -62,10 +62,10 @@
   @media(max-width:820px){.cols{grid-template-columns:1fr}}
   .pos{color:#9A3F1F;font-weight:700}.negc{color:#2F6DB5;font-weight:700}
   .note{font-size:12.5px;color:var(--muted)}
-  .tr{cursor:pointer}.tr:hover td{background:#F3EBDD}.tr.sel td{background:#F3E6D3;font-weight:600}
+  .tr{cursor:pointer}.tr:hover td{background:#34383C}.tr.sel td{background:#34383C;font-weight:600}
   .chip{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:1px solid rgba(0,0,0,.1)}
   .bars{margin:10px 0 4px}.bars .l{font-size:12.5px;color:var(--muted);margin:6px 0 2px}
-  .bars .b{height:14px;background:#EFE9DD;border-radius:4px;overflow:hidden}.bars .b i{display:block;height:100%;border-radius:4px;min-width:2px}
+  .bars .b{height:14px;background:#34383C;border-radius:4px;overflow:hidden}.bars .b i{display:block;height:100%;border-radius:4px;min-width:2px}
   .hint{font-size:13px;color:var(--muted);margin:8px 2px 0}
 </style>
 <meta name="description" content="Carte interactive de la démographie de la Tunisie : population par gouvernorat aux recensements de 2014 et 2024, densité, évolution, structure par âge et principales villes.">
@@ -73,15 +73,16 @@
 <meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Démographie de la Tunisie par gouvernorat : carte interactive"><meta property="og:description" content="Carte interactive de la démographie de la Tunisie : population par gouvernorat aux recensements de 2014 et 2024, densité, évolution, structure par âge et principales villes."><meta property="og:url" content="https://geotunisia.tn/demographie.html">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Démographie de la Tunisie par gouvernorat : carte interactive", "description": "Carte interactive de la démographie de la Tunisie : population par gouvernorat aux recensements de 2014 et 2024, densité, évolution, structure par âge et principales villes.", "url": "https://geotunisia.tn/demographie.html", "inLanguage": "fr", "isPartOf": {"@type": "WebSite", "name": "GeoTunisia", "url": "https://geotunisia.tn/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://geotunisia.tn/"}, {"@type": "ListItem", "position": 2, "name": "Démographie", "item": "https://geotunisia.tn/demographie.html"}]}}</script>
 <style>
-.tg-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:10px 20px;background:#FBF8F1;border-bottom:1px solid #E2D8C6;position:sticky;top:0;z-index:50;font-family:'Source Sans 3',system-ui,sans-serif}
-.tg-brand{font-family:'Barlow','Source Sans 3',sans-serif;font-weight:800;font-size:24px;text-decoration:none;color:#262626}
-.tg-top nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-.tg-top nav a{padding:7px 13px;border-radius:999px;text-decoration:none;font-size:14px;border:1px solid transparent;color:#262626}
-.tg-top nav a:hover{border-color:#E2D8C6;background:#fff}.tg-top nav a[aria-current=page]{background:#262626;color:#FBF8F1}
-.tg-foot{max-width:1120px;margin:10px auto 0;padding:22px 18px 30px;border-top:1px solid #E2D8C6;text-align:center;font:14px 'Source Sans 3',system-ui,sans-serif;color:#5E6266}
-.tg-foot a{color:#262626;font-weight:700}
+:root{color-scheme:dark}
+.tg-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 24px;background:#141516;border-bottom:2px solid #9AD0EC;position:sticky;top:0;z-index:50;font-family:'Barlow','Source Sans 3',system-ui,sans-serif}
+.tg-brand{font-family:'Barlow','Source Sans 3',sans-serif;font-weight:800;font-size:26px;letter-spacing:.02em;text-decoration:none;color:#F5F6F7;text-transform:uppercase}
+.tg-top nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.tg-top nav a{padding:9px 14px;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border:1px solid transparent;color:#F5F6F7;transition:background .15s,border-color .15s,color .15s}
+.tg-top nav a:hover{border-color:#9AD0EC;color:#9AD0EC;background:transparent}.tg-top nav a[aria-current=page]{background:#9AD0EC;color:#141516}
+.tg-foot{max-width:none;margin:36px 0 0;padding:28px 18px 34px;background:#141516;border-top:2px solid #5A6066;text-align:center;font:14px 'Source Sans 3',system-ui,sans-serif;color:#B8BEC4}
+.tg-foot p{margin:4px 0}.tg-foot a{color:#F5F6F7;font-weight:700;text-decoration-color:#9AD0EC}.tg-foot a:hover{color:#9AD0EC}
 </style>
-<style>h1,h2,h3,.stat b,.card h3,.game b,.kpi b{font-family:"Barlow","Source Sans 3",sans-serif!important;font-weight:700!important;letter-spacing:0}</style>
+<style>.seg{flex-wrap:wrap;max-width:100%}.seg button{letter-spacing:.02em;font-size:12.5px;padding:7px 11px}*:not([style*="50%"]):not(.dot):not(.sw.dot):not(.np){border-radius:0!important}button,.btn{text-transform:uppercase;letter-spacing:.04em;font-weight:700;transition:background .15s,border-color .15s,color .15s,transform .15s}button:hover,.btn:hover{border-color:#9AD0EC}.btn.p,.btn.s{border:1px solid #F5F6F7}.btn.p:hover{background:#9AD0EC;color:#141516;transform:none}.btn.s{background:transparent;color:#F5F6F7}.btn.s:hover{background:#F5F6F7;color:#141516;transform:none}a.card{transition:border-color .15s,transform .15s,box-shadow .15s}a.card:hover{border-color:#9AD0EC;transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.55)}input[type=checkbox],input[type=range]{accent-color:#9AD0EC}h1,h2,h3,.stat b,.card h3,.game b,.kpi b{font-family:"Barlow","Source Sans 3",sans-serif!important;font-weight:700!important;letter-spacing:0}h1{text-transform:uppercase;letter-spacing:.01em}</style>
 </head>
 <body>
 <header class="tg-top"><a class="tg-brand" href="index.html">GeoTunisia</a><nav aria-label="Cartes"><a href="index.html">Accueil</a><a href="demographie.html" aria-current="page">Démographie</a><a href="economie.html">Économie</a><a href="climat-eau.html">Climat et eau</a><a href="relief-cours-eau-barrages.html">Relief et cours d’eau</a><a href="agriculture-forets-elevage.html">Agriculture et forêts</a></nav></header>
@@ -216,14 +217,14 @@ Object.assign(MODES,{
  vie_d:{title:'Part des 60 ans et plus : évolution 2014 → 2024 (points de %)',breaks:[4,5,6,7],colors:SEQ_V.slice(1),labels:['< +4 pts','+4 à +5','+5 à +6','+6 à +7','≥ +7 pts'],val:g=>g.amb14?null:g.v24-g.v14}
 });
 let mode='dens', strk=null, evo=false;
-const NOVAL='#DDD9D0';
+const NOVAL='#4A4F54';
 /* ---- Concentration : paliers construits par cumul de gouvernorats (population 2024) ---- */
 const TIERS=[
  {t:25,col:'#5E2412',names:['Tunis','Ariana','Ben Arous','Manouba'],lab:'Grand Tunis'},
  {t:50,col:'#A84C2B',names:['Sfax','Nabeul','Sousse','Bizerte'],lab:'Sfax, Cap Bon, Sousse, Bizerte'},
  {t:70,col:'#D98B5B',names:['Monastir','Mahdia','Médenine','Gabès'],lab:'Sahel de Monastir et Mahdia, Gabès, Médenine'},
  {t:80,col:'#EDC59C',names:['Kairouan','Jendouba','Béja'],lab:'Kairouan, Jendouba, Béja'}];
-const REST='#DDD9D0';
+const REST='#4A4F54';
 const COAST=['Tunis','Ariana','Ben Arous','Bizerte','Nabeul','Sousse','Monastir','Mahdia','Sfax','Gabès','Médenine'], SHORT=['Béja','Jendouba'];
 let concK=3;
 const GN=Object.fromEntries(D.gov.map(g=>[g.name,g]));
@@ -243,7 +244,7 @@ svg.append(gG,gA,gC);
 const tip=document.getElementById('tip');
 const R=p=>2.2+Math.sqrt(p)/58;
 
-const CV={breaks:[-2,5,15,30],colors:['#2F6DB5','#8A8176','#F2C14E','#E4572E','#5B2A86'],
+const CV={breaks:[-2,5,15,30],colors:['#2F6DB5','#9BA2A8','#F2C14E','#E4572E','#5B2A86'],
   labels:['Baisse (< −2 %)','Stable (−2 à +5 %)','+5 à +15 %','+15 à +30 %','≥ +30 %']};
 const cvCls=v=>{let i=0;while(i<CV.breaks.length&&v>=CV.breaks[i])i++;return i};
 
@@ -320,8 +321,8 @@ function govHTML(g){
 const k1=n=>'≈ '+fmt(Math.round(n/1000)*1000);
 function strTip(g){
   const m=g.p24*(100-g.f24)/100, f=g.p24*g.f24/100;
-  let h=`<div class="n" style="border-top:1px solid #333537;padding-top:5px;margin-top:6px"><b style="color:#FBF8F1">Sexe et âges (INS, RGPH 2024 / 2014)</b><br>Hommes ${k1(m)} (${f1(100-g.f24)} %) · Femmes ${k1(f)} (${f1(g.f24)} %)<br>Rapport de masculinité : ${f1(g.rm24)} hommes pour 100 femmes (${f1(g.rm14)} en 2014)<br>0-14 ans : ${f1(g.j24)} % · 15-59 ans : ${f1(g.a24)} % · 60 ans et plus : ${f1(g.v24)} %`;
-  if(g.amb14) h+=`<br><b style="color:#FBF8F1">2014 :</b> colonne ambiguë dans le tableau source, évolutions : données non dispo`;
+  let h=`<div class="n" style="border-top:1px solid #E4E7E9;padding-top:5px;margin-top:6px"><b style="color:#2A2D30">Sexe et âges (INS, RGPH 2024 / 2014)</b><br>Hommes ${k1(m)} (${f1(100-g.f24)} %) · Femmes ${k1(f)} (${f1(g.f24)} %)<br>Rapport de masculinité : ${f1(g.rm24)} hommes pour 100 femmes (${f1(g.rm14)} en 2014)<br>0-14 ans : ${f1(g.j24)} % · 15-59 ans : ${f1(g.a24)} % · 60 ans et plus : ${f1(g.v24)} %`;
+  if(g.amb14) h+=`<br><b style="color:#2A2D30">2014 :</b> colonne ambiguë dans le tableau source, évolutions : données non dispo`;
   else if(g.kas14) h+=`<br>2014 : ${f1(g.v14)} % de 60 ans et plus ; 5-14 ans et 15-59 ans : données non dispo (valeurs aberrantes dans la source)<br>Évolution 60+ : ${pt(g.v24-g.v14)}`;
   else h+=`<br>2014 : 0-14 ans ${f1(g.j14)} % · 15-59 ans ${f1(g.a14)} % · 60+ ${f1(g.v14)} %<br>Évolution : 0-14 ans ${pt(g.j24-g.j14)} · 15-59 ans ${pt(g.a24-g.a14)} · 60+ ${pt(g.v24-g.v14)} · femmes ${pt(g.f24-g.f14)}`+(g.rnd14?`<br>(valeurs 2014 arrondies à l'unité dans la source : écarts approximatifs)`:'');
   return h+`<br>Effectifs ≈ calculés à partir des pourcentages publiés (arrondis au millier)</div>`;
@@ -329,17 +330,17 @@ function strTip(g){
 function concTip(g){
   const co=COAST.includes(g.name)?'Oui, façade maritime principale':SHORT.includes(g.name)?'Courte façade maritime':'Non (gouvernorat intérieur)';
   const t=g.tier<4?`Entre dans le palier « ${TIERS[g.tier].t} % » (cumul ${f1(TIERS[g.tier].cps)} %)`:'Hors des paliers (reste du pays)';
-  return `<div class="n" style="border-top:1px solid #333537;padding-top:5px;margin-top:6px">Part de la population du pays : <b style="color:#FBF8F1">${f1(g.p24/D.tot24*100)} %</b><br>Part de la superficie : ${f1(g.area/AREA*100)} %<br>Côte : ${co}<br>${t}</div>`;
+  return `<div class="n" style="border-top:1px solid #E4E7E9;padding-top:5px;margin-top:6px">Part de la population du pays : <b style="color:#2A2D30">${f1(g.p24/D.tot24*100)} %</b><br>Part de la superficie : ${f1(g.area/AREA*100)} %<br>Côte : ${co}<br>${t}</div>`;
 }
 function cityHTML(c){
   const u=c.unit==='municipalité'?'Commune':'Délégation';
-  let h=`<h3>${c.name}</h3><div style="color:#C9BEAE;font-size:11.5px;margin-bottom:4px">Gouvernorat de ${c.gov}</div><table>
+  let h=`<h3>${c.name}</h3><div style="color:#6A7077;font-size:11.5px;margin-bottom:4px">Gouvernorat de ${c.gov}</div><table>
   ${row(u+' 2024 <span class="d">(6 nov. 2024)</span>',fmt(c.p24))}
   ${row(u+' 2014 <span class="d">(avril 2014)</span>',fmt(c.p14))}
   ${row('Variation 2014 → 2024',sgnN(c.p24-c.p14)+' hab.<br>('+sgn(c.var)+' %)')}</table>`;
-  if(c.agglo&&AGB[c.agglo].parent){const p=AGB[AGB[c.agglo].parent];h+=`<div class="n" style="border-top:1px solid #333537;padding-top:5px;margin-top:6px"><b style="color:#FBF8F1">Incluse dans : ${p.name}</b><br>${fmt(p.p14)} → ${fmt(p.p24)} hab. (${sgn(p.var)} %)</div>`}
+  if(c.agglo&&AGB[c.agglo].parent){const p=AGB[AGB[c.agglo].parent];h+=`<div class="n" style="border-top:1px solid #E4E7E9;padding-top:5px;margin-top:6px"><b style="color:#2A2D30">Incluse dans : ${p.name}</b><br>${fmt(p.p14)} → ${fmt(p.p24)} hab. (${sgn(p.var)} %)</div>`}
   if(c.agglo){const a=AGB[c.agglo];
-    h+=`<div class="n" style="border-top:1px solid #333537;padding-top:5px;margin-top:6px"><b style="color:#FBF8F1">Agglomération : ${a.name}</b><br>${fmt(a.p14)} → ${fmt(a.p24)} hab. (${sgn(a.var)} %)</div>`;}
+    h+=`<div class="n" style="border-top:1px solid #E4E7E9;padding-top:5px;margin-top:6px"><b style="color:#2A2D30">Agglomération : ${a.name}</b><br>${fmt(a.p14)} → ${fmt(a.p24)} hab. (${sgn(a.var)} %)</div>`;}
   if(c.unit!=='municipalité') h+='<div class="n">Chiffre communal non retrouvé : valeur de la délégation.</div>';
   return h;
 }
@@ -397,7 +398,7 @@ function renderConc(){
   const T=TIERS[concK], names=TIERS.slice(0,concK+1).flatMap(x=>x.names), n=names.length;
   const restPop=D.tot24-T.cp, restArea=AREA-T.ca;
   document.getElementById('conctxt').innerHTML=`<b>${n} gouvernorats</b> sur 24 regroupent <b>${fmt(T.cp)} habitants</b>, soit <b>${f1(T.cps)} %</b> de la population, sur <b>${f1(T.cas)} %</b> de la superficie du pays. Densité moyenne : <b>${fmt(Math.round(T.cp/T.ca))} hab./km²</b>`+(concK<3?`, contre ${f1(restPop/restArea,0)} pour le reste du pays.`:`, contre ${f1(restPop/restArea,0)} pour les 9 autres gouvernorats.`);
-  document.getElementById('concbars').innerHTML=`<div class="l">Part de la population</div><div class="b"><i style="width:${T.cps}%;background:#A84C2B"></i></div><div class="l">Part de la superficie</div><div class="b"><i style="width:${T.cas}%;background:#8A8176"></i></div>`;
+  document.getElementById('concbars').innerHTML=`<div class="l">Part de la population</div><div class="b"><i style="width:${T.cps}%;background:#A84C2B"></i></div><div class="l">Part de la superficie</div><div class="b"><i style="width:${T.cas}%;background:#9BA2A8"></i></div>`;
   document.getElementById('conctbl').innerHTML='<tr><th>Palier</th><th>Gouvernorats ajoutés</th><th>Cumul pop.</th><th>Cumul surface</th></tr>'+
     TIERS.map((x,i)=>`<tr class="tr ${i===concK?'sel':''}" data-k="${i}"><td style="white-space:nowrap"><span class="chip" style="background:${x.col}"></span>${x.t} %</td><td>${x.names.join(', ')}<br><span class="note">+${f1(x.add)} %</span></td><td>${f1(x.cps)} %</td><td>${f1(x.cas)} %</td></tr>`).join('');
   document.querySelectorAll('#conctbl .tr').forEach(r=>r.onclick=()=>{concK=+r.dataset.k;paint()});

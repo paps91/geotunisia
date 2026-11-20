@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--cream:#E4E5E7;--paper:#FBF8F1;--ink:#262626;--muted:#5E6266;--line:#E2D8C6;--terra:#C65D3B;--neg:#5B7C99}
+  :root{--cream:#1F2123;--paper:#2A2D30;--ink:#F5F6F7;--muted:#B8BEC4;--line:#5A6066;--terra:#9AD0EC;--neg:#5B7C99}
   *{box-sizing:border-box}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;line-height:1.45}
   .wrap{max-width:1120px;margin:0 auto;padding:20px 16px 28px}
@@ -18,13 +18,13 @@
   .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px}
   .mapcard{position:relative}
   svg{width:100%;height:auto;display:block;touch-action:manipulation}
-  .gov{stroke:#FBF8F1;stroke-width:1.2;stroke-linejoin:round;cursor:pointer;transition:filter .12s}
+  .gov{stroke:#2A2D30;stroke-width:1.2;stroke-linejoin:round;cursor:pointer;transition:filter .12s}
   .gov:hover,.gov.on{stroke:var(--ink);stroke-width:2;filter:brightness(1.04)}
-  .city{fill:var(--ink);fill-opacity:.82;stroke:#FBF8F1;stroke-width:1.6;cursor:pointer}
+  .city{fill:var(--ink);fill-opacity:.82;stroke:#2A2D30;stroke-width:1.6;cursor:pointer}
   .city:hover,.city.on{fill-opacity:1;stroke:#FFD9A0;stroke-width:2.5}
-  .lbl{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:#FBF8F1;stroke-width:3px;stroke-linejoin:round;pointer-events:none;font-weight:500}
+  .lbl{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:#2A2D30;stroke-width:3px;stroke-linejoin:round;pointer-events:none;font-weight:500}
   .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
-  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#34383C}
   .seg button{font:inherit;font-size:13.5px;border:0;background:transparent;padding:7px 14px;cursor:pointer;color:var(--ink)}
   .seg button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
   label.chk{font-size:13.5px;display:inline-flex;gap:6px;align-items:center;cursor:pointer;color:var(--ink)}
@@ -39,13 +39,13 @@
   .kpi small{color:var(--muted);font-size:12.5px}
   .facts{margin:10px 0 0;padding:0;list-style:none;font-size:14px}
   .facts li{padding:6px 0;border-top:1px solid var(--line)}
-  #tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:#FBF8F1;border-radius:10px;padding:10px 12px;font-size:13px;max-width:290px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .08s}
+  #tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:#2A2D30;border-radius:10px;padding:10px 12px;font-size:13px;max-width:290px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .08s}
   #tip h3{margin:0 0 4px;font-family:'Barlow','Source Sans 3',sans-serif;font-weight:400;font-size:20px;line-height:1.1}
   #tip table{border-collapse:collapse;width:100%}
   #tip td{padding:2px 0;vertical-align:top}
   #tip td:last-child{text-align:right;font-weight:700;padding-left:12px;white-space:nowrap}
-  #tip .d{color:#C9BEAE;font-weight:400;font-size:11.5px}
-  #tip .n{margin-top:5px;color:#C9BEAE;font-size:11.5px}
+  #tip .d{color:#6A7077;font-weight:400;font-size:11.5px}
+  #tip .n{margin-top:5px;color:#6A7077;font-size:11.5px}
   details{margin-top:14px}
   summary{cursor:pointer;font-weight:700;font-size:14px}
   table.t{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
@@ -62,14 +62,14 @@
   @media(max-width:820px){.cols{grid-template-columns:1fr}}
   .pos{color:#9A3F1F;font-weight:700}.negc{color:#2F6DB5;font-weight:700}
   .note{font-size:12.5px;color:var(--muted)}
-  .tr{cursor:pointer}.tr:hover td{background:#F3EBDD}.tr.sel td{background:#F3E6D3;font-weight:600}
+  .tr{cursor:pointer}.tr:hover td{background:#34383C}.tr.sel td{background:#34383C;font-weight:600}
   .chip{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:1px solid rgba(0,0,0,.1)}
   .bars{margin:10px 0 4px}.bars .l{font-size:12.5px;color:var(--muted);margin:6px 0 2px}
-  .bars .b{height:14px;background:#EFE9DD;border-radius:4px;overflow:hidden}.bars .b i{display:block;height:100%;border-radius:4px;min-width:2px}
+  .bars .b{height:14px;background:#34383C;border-radius:4px;overflow:hidden}.bars .b i{display:block;height:100%;border-radius:4px;min-width:2px}
   .hint{font-size:13px;color:var(--muted);margin:8px 2px 0}
-  .datebox{font-size:13px;color:var(--ink);background:#F3EBDD;border-radius:8px;padding:8px 10px;margin:4px 0 8px}
+  .datebox{font-size:13px;color:var(--ink);background:#34383C;border-radius:8px;padding:8px 10px;margin:4px 0 8px}
 
-  .tabs{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff;margin:0 0 8px}
+  .tabs{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#34383C;margin:0 0 8px}
   .tabs button{font:inherit;font-size:13.5px;border:0;background:transparent;padding:7px 14px;cursor:pointer;color:var(--ink)}
   .tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
   .ch text{font-size:11px;fill:var(--muted)}.ch .grid line{stroke:#E8DFCD;stroke-width:1}.ch .ax{stroke:#B9AE9B;stroke-width:1}
@@ -84,15 +84,16 @@
 <meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Agriculture, forêts et élevage en Tunisie : carte par gouvernorat"><meta property="og:description" content="Carte interactive de l&#x27;agriculture en Tunisie : forêts, oliviers, palmiers dattiers, cultures irriguées (céréales, fourrage, maraîchage, arboriculture) et cheptel par gouvernorat."><meta property="og:url" content="https://geotunisia.tn/agriculture-forets-elevage.html">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Agriculture, forêts et élevage en Tunisie : carte par gouvernorat", "description": "Carte interactive de l'agriculture en Tunisie : forêts, oliviers, palmiers dattiers, cultures irriguées (céréales, fourrage, maraîchage, arboriculture) et cheptel par gouvernorat.", "url": "https://geotunisia.tn/agriculture-forets-elevage.html", "inLanguage": "fr", "isPartOf": {"@type": "WebSite", "name": "GeoTunisia", "url": "https://geotunisia.tn/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://geotunisia.tn/"}, {"@type": "ListItem", "position": 2, "name": "Agriculture et forêts", "item": "https://geotunisia.tn/agriculture-forets-elevage.html"}]}}</script>
 <style>
-.tg-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:10px 20px;background:#FBF8F1;border-bottom:1px solid #E2D8C6;position:sticky;top:0;z-index:50;font-family:'Source Sans 3',system-ui,sans-serif}
-.tg-brand{font-family:'Barlow','Source Sans 3',sans-serif;font-weight:800;font-size:24px;text-decoration:none;color:#262626}
-.tg-top nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-.tg-top nav a{padding:7px 13px;border-radius:999px;text-decoration:none;font-size:14px;border:1px solid transparent;color:#262626}
-.tg-top nav a:hover{border-color:#E2D8C6;background:#fff}.tg-top nav a[aria-current=page]{background:#262626;color:#FBF8F1}
-.tg-foot{max-width:1120px;margin:10px auto 0;padding:22px 18px 30px;border-top:1px solid #E2D8C6;text-align:center;font:14px 'Source Sans 3',system-ui,sans-serif;color:#5E6266}
-.tg-foot a{color:#262626;font-weight:700}
+:root{color-scheme:dark}
+.tg-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 24px;background:#141516;border-bottom:2px solid #9AD0EC;position:sticky;top:0;z-index:50;font-family:'Barlow','Source Sans 3',system-ui,sans-serif}
+.tg-brand{font-family:'Barlow','Source Sans 3',sans-serif;font-weight:800;font-size:26px;letter-spacing:.02em;text-decoration:none;color:#F5F6F7;text-transform:uppercase}
+.tg-top nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.tg-top nav a{padding:9px 14px;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border:1px solid transparent;color:#F5F6F7;transition:background .15s,border-color .15s,color .15s}
+.tg-top nav a:hover{border-color:#9AD0EC;color:#9AD0EC;background:transparent}.tg-top nav a[aria-current=page]{background:#9AD0EC;color:#141516}
+.tg-foot{max-width:none;margin:36px 0 0;padding:28px 18px 34px;background:#141516;border-top:2px solid #5A6066;text-align:center;font:14px 'Source Sans 3',system-ui,sans-serif;color:#B8BEC4}
+.tg-foot p{margin:4px 0}.tg-foot a{color:#F5F6F7;font-weight:700;text-decoration-color:#9AD0EC}.tg-foot a:hover{color:#9AD0EC}
 </style>
-<style>h1,h2,h3,.stat b,.card h3,.game b,.kpi b{font-family:"Barlow","Source Sans 3",sans-serif!important;font-weight:700!important;letter-spacing:0}</style>
+<style>.seg{flex-wrap:wrap;max-width:100%}.seg button{letter-spacing:.02em;font-size:12.5px;padding:7px 11px}*:not([style*="50%"]):not(.dot):not(.sw.dot):not(.np){border-radius:0!important}button,.btn{text-transform:uppercase;letter-spacing:.04em;font-weight:700;transition:background .15s,border-color .15s,color .15s,transform .15s}button:hover,.btn:hover{border-color:#9AD0EC}.btn.p,.btn.s{border:1px solid #F5F6F7}.btn.p:hover{background:#9AD0EC;color:#141516;transform:none}.btn.s{background:transparent;color:#F5F6F7}.btn.s:hover{background:#F5F6F7;color:#141516;transform:none}a.card{transition:border-color .15s,transform .15s,box-shadow .15s}a.card:hover{border-color:#9AD0EC;transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.55)}input[type=checkbox],input[type=range]{accent-color:#9AD0EC}h1,h2,h3,.stat b,.card h3,.game b,.kpi b{font-family:"Barlow","Source Sans 3",sans-serif!important;font-weight:700!important;letter-spacing:0}h1{text-transform:uppercase;letter-spacing:.01em}</style>
 </head>
 <body>
 <header class="tg-top"><a class="tg-brand" href="index.html">GeoTunisia</a><nav aria-label="Cartes"><a href="index.html">Accueil</a><a href="demographie.html">Démographie</a><a href="economie.html">Économie</a><a href="climat-eau.html">Climat et eau</a><a href="relief-cours-eau-barrages.html">Relief et cours d’eau</a><a href="agriculture-forets-elevage.html" aria-current="page">Agriculture et forêts</a></nav></header>
@@ -194,7 +195,7 @@ const row=(l,v)=>`<tr><td>${l}</td><td>${v}</td></tr>`;
 function tipHTML(g){
   const I=IND[ind],v=I.val(g,rel);
   let h=`<h3>Gouvernorat de ${g.name}</h3><table>${row(I.lab,v==null?'<b>'+ND+'</b>':'<b>'+fv(v,I.unit(rel))+' '+I.unit(rel)+'</b>')}${v==null?'':row('<span class="d">équivalent</span>','<span style="font-weight:400">'+fv(I.val(g,!rel),I.unit(!rel))+' '+I.unit(!rel)+'</span>')}</table>`;
-  h+=`<div class="n" style="border-top:1px solid #333537;padding-top:5px;margin-top:6px"><table>`
+  h+=`<div class="n" style="border-top:1px solid #E4E7E9;padding-top:5px;margin-top:6px"><table>`
    +row('Forêts (2007-2010)',hp(g.forf+g.foau,g))
    +row('Oliviers à huile (2017)',hp(g.oli,g))
    +row('Palmiers dattiers (2020)',g.dat==null?ND:hp(g.dat,g))
@@ -228,9 +229,9 @@ function paint(){
   document.getElementById('datebox').innerHTML=I.date;
   const items=D.gov.map(g=>({n:g.name,v:I.val(g,rel),o:I.val(g,!rel)})).sort((a,b)=>(b.v??-1)-(a.v??-1)),mx=Math.max(...vals);
   document.getElementById('rank').innerHTML=`<div class="legtitle" style="margin:0 0 4px">Classement (valeur · équivalent ${rel?'en '+I.unit(false):(I.unit(true).startsWith('%')?'en % du territoire':'par km²')})</div>`+items.map(i=>{
-    if(i.v==null)return `<div style="display:grid;grid-template-columns:104px 1fr;gap:6px;align-items:center;font-size:12px;margin:1px 0"><span>${i.n}</span><span style="color:#5E6266">${ND}</span></div>`;
+    if(i.v==null)return `<div style="display:grid;grid-template-columns:104px 1fr;gap:6px;align-items:center;font-size:12px;margin:1px 0"><span>${i.n}</span><span style="color:#B8BEC4">${ND}</span></div>`;
     const c=colors[cls(br,i.v)];
-    return `<div style="display:grid;grid-template-columns:104px 1fr 150px;gap:6px;align-items:center;font-size:12px;margin:1px 0"><span>${i.n}</span><span style="background:#EFE9DD;border-radius:3px;height:9px"><i style="display:block;height:100%;width:${Math.max(1,i.v/mx*100)}%;background:${c};border-radius:3px"></i></span><span style="text-align:right"><b>${fv(i.v,u)}</b> <span style="color:#5E6266;font-size:11px">${i.o==null?'':'· '+fv(i.o,I.unit(!rel))+(I.unit(!rel).startsWith('%')?' %':I.unit(!rel)==='ha'?' ha':' /km²')}</span></span></div>`}).join('');
+    return `<div style="display:grid;grid-template-columns:104px 1fr 150px;gap:6px;align-items:center;font-size:12px;margin:1px 0"><span>${i.n}</span><span style="background:#3E4347;border-radius:3px;height:9px"><i style="display:block;height:100%;width:${Math.max(1,i.v/mx*100)}%;background:${c};border-radius:3px"></i></span><span style="text-align:right"><b>${fv(i.v,u)}</b> <span style="color:#B8BEC4;font-size:11px">${i.o==null?'':'· '+fv(i.o,I.unit(!rel))+(I.unit(!rel).startsWith('%')?' %':I.unit(!rel)==='ha'?' ha':' /km²')}</span></span></div>`}).join('');
 }
 document.getElementById('rel').onchange=e=>{rel=e.target.checked;paint()};
 const sum=f=>D.gov.reduce((s,g)=>s+f(g),0);
