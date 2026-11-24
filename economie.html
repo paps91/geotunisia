@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Économie de la Tunisie par gouvernorat : chômage, emploi, richesse | GeoTunisia</title>
+<title>Économie de la Tunisie par gouvernorat : chômage, emploi, richesse et tourisme | GeoTunisia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -69,10 +69,10 @@
   .hint{font-size:13px;color:var(--muted);margin:8px 2px 0}
   .datebox{font-size:13px;color:var(--ink);background:#34383C;border-radius:8px;padding:8px 10px;margin:4px 0 8px}
 </style>
-<meta name="description" content="Carte interactive de l&#x27;économie de la Tunisie : chômage, emploi, protection sociale et richesse produite, région par région, d&#x27;après les statistiques officielles.">
+<meta name="description" content="Carte interactive de l&#x27;économie de la Tunisie : chômage, emploi, protection sociale, richesse, pauvreté et capacité hôtelière (lits d&#x27;hôtel par gouvernorat), d&#x27;après les statistiques officielles.">
 <link rel="canonical" href="https://geotunisia.tn/economie.html">
-<meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Économie de la Tunisie par gouvernorat : chômage, emploi, richesse"><meta property="og:description" content="Carte interactive de l&#x27;économie de la Tunisie : chômage, emploi, protection sociale et richesse produite, région par région, d&#x27;après les statistiques officielles."><meta property="og:url" content="https://geotunisia.tn/economie.html">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Économie de la Tunisie par gouvernorat : chômage, emploi, richesse", "description": "Carte interactive de l'économie de la Tunisie : chômage, emploi, protection sociale et richesse produite, région par région, d'après les statistiques officielles.", "url": "https://geotunisia.tn/economie.html", "inLanguage": "fr", "isPartOf": {"@type": "WebSite", "name": "GeoTunisia", "url": "https://geotunisia.tn/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://geotunisia.tn/"}, {"@type": "ListItem", "position": 2, "name": "Économie", "item": "https://geotunisia.tn/economie.html"}]}}</script>
+<meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Économie de la Tunisie par gouvernorat : chômage, emploi, richesse et tourisme"><meta property="og:description" content="Carte interactive de l&#x27;économie de la Tunisie : chômage, emploi, protection sociale, richesse, pauvreté et capacité hôtelière (lits d&#x27;hôtel par gouvernorat), d&#x27;après les statistiques officielles."><meta property="og:url" content="https://geotunisia.tn/economie.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Économie de la Tunisie par gouvernorat : chômage, emploi, richesse et tourisme", "description": "Carte interactive de l'économie de la Tunisie : chômage, emploi, protection sociale, richesse, pauvreté et capacité hôtelière (lits d'hôtel par gouvernorat), d'après les statistiques officielles.", "url": "https://geotunisia.tn/economie.html", "inLanguage": "fr", "isPartOf": {"@type": "WebSite", "name": "GeoTunisia", "url": "https://geotunisia.tn/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://geotunisia.tn/"}, {"@type": "ListItem", "position": 2, "name": "Économie", "item": "https://geotunisia.tn/economie.html"}]}}</script>
 <style>
 :root{color-scheme:dark}
 .tg-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 24px;background:#141516;border-bottom:2px solid #9AD0EC;position:sticky;top:0;z-index:50;font-family:'Barlow','Source Sans 3',system-ui,sans-serif}
@@ -89,7 +89,7 @@
 <header class="tg-top"><a class="tg-brand" href="index.html">GeoTunisia</a><nav aria-label="Cartes"><a href="index.html">Accueil</a><a href="demographie.html">Démographie</a><a href="economie.html" aria-current="page">Économie</a><a href="climat-eau.html">Climat et eau</a><a href="relief-cours-eau-barrages.html">Relief et cours d’eau</a><a href="agriculture-forets-elevage.html">Agriculture et forêts</a></nav></header>
 <div class="wrap">
   <h1>Économie tunisienne</h1>
-  <p class="sub">Chômage, emploi, protection sociale et richesse produite : ce que les statistiques officielles permettent de comparer entre régions.</p>
+  <p class="sub">Chômage, emploi, protection sociale, richesse produite, pauvreté et tourisme : ce que les statistiques officielles permettent de comparer entre régions.</p>
   <div class="grid">
     <div class="card mapcard">
       <div class="controls">
@@ -102,6 +102,9 @@
           <button id="m-ppa" aria-pressed="false">PIB / habitant 2016 ($ PPA)</button>
           <button id="m-reel" aria-pressed="false">Évolution réelle 2013-2016</button>
           <button id="m-agri" aria-pressed="false">Agriculture dans la richesse 2016</button>
+          <button id="m-lits" aria-pressed="false">Lits d'hôtel 2023</button>
+          <button id="m-lits1k" aria-pressed="false">Lits / 1 000 hab. 2023</button>
+          <button id="m-pauv" aria-pressed="false">Pauvreté 2021 (région)</button>
         </div>
       </div>
       <div class="datebox" id="datebox"></div>
@@ -129,6 +132,25 @@
     </div>
   </div>
 
+  <section class="card" style="margin-top:20px" id="tour">
+    <style>.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:24px;margin-top:18px}.kpis3{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}.trow{display:grid;grid-template-columns:124px 1fr 118px;gap:8px;align-items:center;font-size:12.5px;margin:3px 0}.tb{display:block;background:#3E4347;height:11px}.tb i{display:block;height:100%}.tv{text-align:right;color:var(--muted)}.tv em{font-style:normal}.tsep{font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);margin:8px 0 3px;padding-top:5px}</style>
+    <h2>Le tourisme en Tunisie</h2>
+    <p class="hint" style="margin-top:0">Repères nationaux. Pour la géographie, utilise les cartes « Lits d'hôtel 2023 » et « Lits / 1 000 hab. 2023 » en haut de page : le tourisme par gouvernorat n'existe, dans les sources que j'ai trouvées, que pour la capacité d'hébergement.</p>
+    <div class="kpis kpis3" style="margin-top:12px">
+      <div class="kpi"><b>5,1 %</b><small>part du tourisme dans le PIB en 2024 (5,0 % en 2023) ; 3,2 % en 2022 : changement de base en 2023, comparaison prudente (INS, compte satellite du tourisme)</small></div>
+      <div class="kpi"><b>106,7 milliers</b><small>emplois directs du tourisme en 2022, soit 3,1 % de l'emploi (155,7 milliers en 2019). 2023 et 2024 : <strong>données non dispo</strong> (non publiés par l'INS)</small></div>
+      <div class="kpi"><b>231 026 lits</b><small>de capacité d'hébergement fin 2023, dans 905 hôtels (INS ; chiffres probables)</small></div>
+      <div class="kpi"><b>5 420 M DT</b><small>de recettes touristiques en 2022 (6 647 M DT en 2019, ONTT). Années suivantes : <strong>non actualisées</strong> ici</small></div>
+      <div class="kpi"><b>7,12 millions</b><small>d'entrées de non-résidents de janvier à août 2026 (−0,5 % sur un an) ; 18,58 millions de nuitées hôtelières (−2,4 %), occupation relative 42,7 % (ministère du Tourisme, ONTT, via la presse)</small></div>
+    </div>
+    <div class="tgrid">
+      <div><div class="legtitle">Part du tourisme dans le PIB (%)</div><div id="ch-pib"></div></div>
+      <div><div class="legtitle">Emplois directs du tourisme (milliers)</div><div id="ch-emp"></div></div>
+      <div><div class="legtitle">Recettes touristiques (millions de DT)</div><div id="ch-rec"></div></div>
+      <div><div class="legtitle">Taux d'occupation hôtelier par région touristique, 2022 (%)</div><div id="ch-occ"></div></div>
+    </div>
+    <p class="hint">Le découpage de l'ONTT en régions touristiques (Nabeul-Hammamet et Yasmine Hammamet, par exemple, sont deux régions d'un même gouvernorat) ne correspond pas aux gouvernorats : c'est pourquoi le taux d'occupation n'est pas cartographié. Moyenne nationale 2022 : 30,6 %.</p>
+  </section>
   <section class="card" style="margin-top:20px" id="lim">
     <h2>Ce que les chiffres disent, et ce qu'ils ne disent pas</h2>
     <ul class="facts">
@@ -136,6 +158,9 @@
       <li><b>Dates différentes.</b> Le chômage et l'emploi par gouvernorat datent du recensement de 2014 ; en 2024, chômage et emploi par gouvernorat : données non dispo (l'INS ne détaille l'emploi que par district). Le PIB régional date de 2016. Les indicateurs ne sont donc pas comparables entre eux terme à terme.</li>
       <li><b>Définitions différentes.</b> Le recensement 2024 applique la 19e CIST (conférence internationale des statisticiens du travail), qui exclut notamment l'agriculture de subsistance de l'emploi : le taux d'emploi baisse (39,9 % contre 41,0 %) et le taux de chômage monte (17,2 % contre 16,5 %). Comparer 2014 et 2024 demande de s'en souvenir.</li>
       <li><b>Chômage 2014 par gouvernorat et PIB 2016 par région</b> racontent la même géographie : le littoral et le Grand Tunis d'un côté, le Centre-Ouest et le Nord-Ouest de l'autre.</li>
+      <li><b>Revenu par gouvernorat : données non dispo.</b> L'INS ne publie ni revenu médian ni revenu moyen par gouvernorat, et je n'ai trouvé aucun salaire du secteur touristique par gouvernorat. Substitut partiel : la carte « Pauvreté 2021 », qui repose sur la dépense de consommation (pas sur le revenu) et n'existe que pour 7 grandes régions. La dépense moyenne par personne n'est disponible que pour le Grand Tunis (6 874 DT) et le Centre-Est (6 130 DT) ; les cinq autres régions : <b>données non dispo</b>.</li>
+      <li><b>Tourisme par gouvernorat : seule la capacité d'hébergement l'est.</b> Emplois touristiques, nuitées et arrivées par gouvernorat : <b>données non dispo</b> (l'ONTT détaille l'occupation par région touristique, un découpage différent). Les lits 2023 sont « probables » ; Manouba et Siliana n'ont aucun lit recensé dans la source.</li>
+      <li><b>Le tourisme dans le PIB a changé de base en 2023.</b> L'INS a pris 2023 comme nouvelle année de référence avec une enquête sur les dépenses des visiteurs : 5,0 % en 2023 et 5,1 % en 2024, contre 3,2 % en 2022 et 3,1 % en moyenne sur la période précédente. Une part de ce saut vient de la méthode et de la faible croissance du PIB en 2023, pas seulement du tourisme.</li>
     </ul>
   </section>
   <section class="card" style="margin-top:20px" id="meth">
@@ -153,13 +178,24 @@
       <p><b>Un repère indirect : la couverture sociale.</b> En 2024, 66,3 % des actifs occupés sont effectivement couverts, soit environ un tiers non couverts. Chez les 18-29 ans la couverture tombe à 46,7 %, ce que l'INS relie à des emplois précaires et informels. Attention : « non couvert » n'est pas synonyme d'« informel » ; ce n'est pas une mesure officielle de l'informalité.</p></details>
     <details><summary><b>Couverture sociale effective</b></summary>
       <p>Part des actifs occupés effectivement couverts par un régime contributif de sécurité sociale (CNSS, CNRPS ou CNAM) : 2 426,6 ÷ 3 661,7 milliers = 66,3 % en 2024 (64,6 % en 2014). Les programmes non contributifs, comme Amen Social, ne sont pas comptés.</p></details>
+    <details><summary><b>Lits d'hôtel et lits pour 1 000 habitants</b></summary>
+      <p><b>Lits d'hôtel :</b> capacité d'hébergement officiellement recensée par l'ONTT, publiée par l'INS par gouvernorat (905 établissements et 231 026 lits fin 2023). Le total national de l'ONTT (229 733 lits en 2022) regroupe hôtels classés, villages de vacances, appart-hôtels, pensions de famille, campings, etc. Hébergement non recensé (locations entre particuliers, maisons d'hôtes non classées) : <b>données non dispo</b>. Le lit est compté dans le gouvernorat de l'établissement.</p>
+      <p><b>Formule :</b> lits 2023 ÷ population du recensement 2024 × 1 000. Exemple : Nabeul, 50 839 ÷ population × 1 000 = 58,9. National : 231 026 ÷ 11 972,2 milliers = 19,3 lits pour 1 000 habitants. Les chiffres 2023 sont « probables » selon l'INS ; la colonne 2024 du rapport est une prévision, non utilisée ici.</p>
+      <p><b>Vérification :</b> la somme des 24 gouvernorats redonne exactement les totaux de l'INS (905 hôtels, 231 026 lits en 2023 ; 240 077 lits en 2014). Le tableau a été reconstitué à partir du texte du PDF : Manouba (aucun lit) et Siliana (aucun hôtel depuis 2022) sont déduits des totaux régionaux, à confirmer dans le document original.</p></details>
+    <details><summary><b>Tourisme dans le PIB et dans l'emploi</b></summary>
+      <p>Le compte satellite du tourisme (INS, cadre international RIST 2008) mesure la valeur ajoutée directe des activités touristiques : hébergement, restauration, transport de voyageurs, etc. Part dans la valeur ajoutée totale : 4,1 % (2018), 4,5 % (2019), 1,7 % (2020), 2,0 % (2021), 3,2 % (2022). Pour 2023 et 2024, l'INS publie le PIB direct du tourisme : 7 529,7 puis 8 072,0 millions de DT, soit 5,0 % puis 5,1 % du PIB. Emplois directs : 137,2 / 155,7 / 74,7 / 72,9 / 106,7 milliers de 2018 à 2022 ; emplois 2023 et 2024 : <b>données non dispo</b>.</p></details>
+    <details><summary><b>Pauvreté et dépense de consommation</b></summary>
+      <p>Enquête nationale sur le budget, la consommation et le niveau de vie des ménages (INS, 2021). Une personne est considérée comme pauvre si sa dépense de consommation annuelle est inférieure à 2 536 DT (seuil 2021). Le taux de pauvreté mesure donc un niveau de dépense, pas un revenu. Les 7 régions sont celles de l'INS ; le Nord-Ouest passe de 28,4 % à 22,5 % entre 2015 et 2021, le Centre-Ouest de 30,8 % à 37,0 %.</p></details>
     <details><summary><b>PIB et valeur ajoutée par région</b></summary>
       <p>L'INS ne peut pas calculer le PIB régional par la demande, car les échanges entre régions ne sont pas mesurés. Il régionalise donc la valeur ajoutée par secteur, avec des méthodes mixtes : l'agriculture est répartie par produit, et beaucoup de services le sont à partir d'indicateurs (masses salariales du répertoire des entreprises, enquête emploi, salaires de la fonction publique pour l'administration et l'éducation, production physique pour les mines, l'eau ou le tabac). Les impôts nets des subventions sont répartis selon la part de chaque région dans la valeur ajoutée nationale. Le PIB régional est donc <b>une estimation</b>, pas une mesure directe. Il est publié en dinars courants.</p></details>
   </section>
   <details><summary>Voir les données en tableau</summary><div style="overflow-x:auto"><table class="t" id="tbl"></table></div>
-    <div style="overflow-x:auto;margin-top:14px"><table class="t" id="tblreg"></table></div></details>
+    <div style="overflow-x:auto;margin-top:14px"><table class="t" id="tblreg"></table></div>
+    <div style="overflow-x:auto;margin-top:14px"><table class="t" id="tbltour"></table></div>
+    <div style="overflow-x:auto;margin-top:14px"><table class="t" id="tblpov"></table></div></details>
   <div class="src">
     <p><b>Sources.</b> Composition des districts : celle du Flash Protection sociale, complétée par Siliana (District 3), absente de la liste de l'INS mais confirmée par le total du District 3 (3 121 821 habitants, d'après Webdo). Chômage et emploi par gouvernorat, avril 2014 : INS, RGPH 2014 (tableaux IV.6 et III.5 ; totaux nationaux vérifiés : 573,3 et 3 296,0 milliers). Emploi 2024 par district, chômage national 2024, définitions : INS, <i>Flash Emploi</i>, RGPH 2024 (septembre 2025). Couverture sociale effective par gouvernorat : INS, <i>Flash Protection sociale</i>, RGPH 2024 (septembre 2025, version du fichier consulté : 66,3 % au niveau national ; certains médias ont repris une version antérieure légèrement différente). Composition des districts : même Flash. PIB et valeur ajoutée par région : INS, <i>Estimation du produit intérieur brut au niveau des grandes régions</i> (juin 2021), années 2013 et 2016 ; la composition des régions en gouvernorats est vérifiée en recoupant PIB et PIB par habitant avec la population des gouvernorats. Fond de carte : data4tunisia / iyedg (tunmaps).</p>
+        <p><b>Sources tourisme et pauvreté.</b> Hôtels et lits par gouvernorat (2014, 2022, 2023) : INS, <i>Rapport annuel sur les indicateurs d'infrastructure 2023</i>, tableaux 10.1 et 10.2. Taux d'occupation et lits par région touristique 2022, recettes 2019-2022 : ONTT et ministère du Tourisme, <i>Tourisme en chiffres 2022</i>. Part du tourisme dans le PIB et emplois 2018-2022 : INS, <i>Compte satellite du tourisme</i> (bulletin 2022) ; 2023 : note de synthèse CST 2023 ; 2023 et 2024 : <i>Compte satellite du tourisme 2024</i>. Fréquentation janvier-août 2026 : ministère du Tourisme et ONTT, relayés par Webdo (9 octobre 2026). Pauvreté et dépense : INS, communiqué de l'enquête budget-consommation 2021 (10 février 2023).</p>
     <p><b>Méthodes.</b> Définitions de l'emploi, du chômage et de la participation, effets du passage de la 13e à la 19e CIST : INS, <i>Flash Emploi</i> (septembre 2025). Couverture sociale : INS, <i>Flash Protection sociale</i> (septembre 2025). PIB régional, indicateurs et traitement de l'informel : INS, <i>Les comptes régionaux tunisiens : concepts, méthodes et sources de données</i> (juin 2021).</p>
     <p><b>Prix et monnaie.</b> Le PIB régional de l'INS est exprimé en dinars courants (nominal) : il ne corrige pas l'inflation. Pour comparer 2013 et 2016, j'applique le déflateur du PIB de la Banque mondiale (base 2015 = 100 : 91,37 en 2013, 104,94 en 2016) à tous les territoires, faute de déflateur régional. Conversion en $ PPA : facteur 0,75 DT par dollar international en 2016, relayé par historysaid.com d'après la Banque mondiale ; les facteurs diffèrent selon la vague du Programme de comparaison internationale (ICP), donc résultat indicatif.</p>
     <p><b>Réserve.</b> Dans le tableau INS de la structure de la valeur ajoutée 2016, la colonne du Grand Tunis ne se recoupe pas exactement (les rubriques publiées additionnent environ 103,7 %). Les parts sectorielles du Grand Tunis sont donc à prendre avec prudence ; la part de l'agriculture (1,6 %) est la plus robuste.</p>
@@ -205,6 +241,20 @@ const MODES={
   labels:['< 5','5 – 10','10 – 15','15 – 20','20 – 25','≥ 25'],fmt:v=>f1(v)+' %',nat:9.4,
   date:'<b>Année 2016 (INS, juin 2021).</b> Par grande région. National : 9,4 % de la valeur ajoutée. Données plus récentes : <b>non actualisées</b>.'}
 };
+const TOUR={"Tunis": [109, 15577, 18888], "Ariana": [3, 743, 132], "Ben Arous": [10, 4752, 4084], "Manouba": [0, 0, 0], "Nabeul": [150, 50839, 50031], "Zaghouan": [3, 103, 48], "Bizerte": [29, 2272, 3205], "Béja": [9, 419, 270], "Jendouba": [30, 4745, 6134], "Le Kef": [15, 397, 262], "Siliana": [0, 0, 32], "Sousse": [123, 48292, 50578], "Monastir": [47, 21730, 23422], "Mahdia": [29, 9961, 10638], "Sfax": [53, 4164, 3392], "Kairouan": [11, 1003, 961], "Kasserine": [9, 769, 476], "Sidi Bouzid": [5, 168, 108], "Gabès": [19, 1291, 1709], "Médenine": [149, 53114, 54141], "Tataouine": [14, 581, 499], "Gafsa": [11, 1179, 1237], "Tozeur": [41, 4584, 6052], "Kébili": [36, 4343, 3778]};
+const POV={gt:[5.3,4.7],ne:[11.6,15.2],no:[28.4,22.5],ce:[11.5,13.2],co:[30.8,37.0],se:[18.6,23.2],so:[17.6,18.1]};
+const DEP21={gt:6874,ce:6130};
+const BEDS=Object.values(TOUR).reduce((s,t)=>s+t[1],0), HOTELS=Object.values(TOUR).reduce((s,t)=>s+t[0],0), POP=D.gov.reduce((s,g)=>s+g.p24,0);
+const per1k=g=>TOUR[g.name][1]/g.p24*1000;
+MODES.lits={title:'Capacité d\'hébergement des hôtels, 2023 (nombre de lits)',unit:'gov',val:g=>TOUR[g.name][1],breaks:[1000,5000,20000,50000],colors:SEQ_T.slice(1,6),
+  labels:['< 1 000','1 000 – 5 000','5 000 – 20 000','20 000 – 50 000','≥ 50 000'],fmt:v=>fmt(Math.round(v))+' lits',nat:null,
+  date:'<b>Fin 2023 (INS, d\'après l\'ONTT) ; chiffres « probables », pas définitifs.</b> Total : '+fmt(BEDS)+' lits dans '+HOTELS+' hôtels. Les lits sont comptés dans le gouvernorat où se trouve l\'établissement. Nuitées, arrivées et emplois du tourisme par gouvernorat : <b>données non dispo</b>.'};
+MODES.lits1k={title:'Lits d\'hôtel pour 1 000 habitants (lits 2023 ÷ population 2024)',unit:'gov',val:per1k,breaks:[1,5,15,40,80],colors:SEQ_T.slice(0,6),
+  labels:['< 1','1 – 5','5 – 15','15 – 40','40 – 80','≥ 80'],fmt:v=>f1(v)+' lits',nat:null,
+  date:'<b>Lits 2023 (INS, probables) ÷ population du recensement 2024.</b> Moyenne nationale : '+f1(BEDS/POP*1000)+' lits pour 1 000 habitants. Un chiffre élevé signale une région tournée vers le tourisme, pas un hébergement par habitant utilisé : le taux d\'occupation par gouvernorat est <b>données non dispo</b>.'};
+MODES.pauv={title:'Taux de pauvreté en 2021 (%), par grande région',unit:'reg',val:g=>POV[g.reg][1],breaks:[10,15,20,30],colors:SEQ_R.slice(1,6),
+  labels:['< 10','10 – 15','15 – 20','20 – 30','≥ 30'],fmt:v=>f1(v)+' %',nat:16.6,
+  date:'<b>Enquête nationale sur le budget, la consommation et le niveau de vie des ménages 2021 (INS).</b> Part de la population dont la dépense de consommation annuelle est inférieure à 2 536 DT par personne (national : 16,6 %). Par grande région seulement : pauvreté par gouvernorat dans cette enquête : <b>données non dispo</b>. Ce n\'est pas un revenu.'};
 let mode='chom';
 const cls=(M,v)=>{let i=0;while(i<M.breaks.length&&v>=M.breaks[i])i++;return i};
 const grp=g=>MODES[mode].unit==='reg'?D.gov.filter(x=>x.reg===g.reg):MODES[mode].unit==='dist'?D.gov.filter(x=>x.dist===g.dist):[g];
@@ -219,8 +269,32 @@ function hide(){D.gov.forEach(x=>x._el.classList.remove('on'));tip.style.opacity
 function move(e){const w=tip.offsetWidth,h=tip.offsetHeight;let x=e.clientX+16,y=e.clientY+16;if(x+w>innerWidth-8)x=e.clientX-w-16;if(y+h>innerHeight-8)y=innerHeight-h-8;if(x<8)x=8;tip.style.left=x+'px';tip.style.top=y+'px'}
 const row=(l,v)=>`<tr><td>${l}</td><td>${v}</td></tr>`;
 const sg=(v,ref,d=1)=>{const x=v-ref;return (x>0?'+':x<0?'−':'')+f1(Math.abs(x),d)};
+function tipTour(g){
+  const [nh,nb,nb14]=TOUR[g.name], per=nb/g.p24*1000;
+  const key=mode==='lits'?(x=>TOUR[x.name][1]):per1k;
+  const rk=[...D.gov].sort((a,b)=>key(b)-key(a)).findIndex(x=>x===g)+1;
+  if(nb===0)return `<h3>Gouvernorat de ${g.name}</h3><table>${row('Capacité hôtelière 2023','<b>aucun lit recensé</b>')}${row('Hôtels',nh)}${row('Lits en 2014',nb14?fmt(nb14):'aucun')}${row('Rang',rk+' sur 24')}</table><div class="n" style="border-top:1px solid var(--line);padding-top:5px;margin-top:6px">Hébergement non recensé (maisons d\'hôtes non classées, locations) : <b>données non dispo</b>.</div>`;
+  const ev=nb14?(nb/nb14-1)*100:null;
+  return `<h3>Gouvernorat de ${g.name}</h3><table>
+  ${row('Lits 2023',`<b>${fmt(nb)}</b>`)}${row('Hôtels',nh)}
+  ${row('Lits / 1 000 hab.',`<b>${f1(per)}</b> <span class="d">(national : ${f1(BEDS/POP*1000)})</span>`)}
+  ${row('Part du pays',f1(nb/BEDS*100)+' %')}
+  ${row('Lits en 2014',fmt(nb14))}${row('Évol. 2014-2023',ev==null?'<span class="d">données non dispo</span>':(ev>0?'+':ev<0?'−':'')+f1(Math.abs(ev))+' %')}
+  ${row('Rang',rk+' sur 24')}</table>
+  <div class="n" style="border-top:1px solid var(--line);padding-top:5px;margin-top:6px">Source : INS, indicateurs d\'infrastructure 2023 (chiffres 2023 probables). Population : RGPH 2024 (${fmt(g.p24)} hab.).</div>`;
+}
+function tipPauv(g){
+  const r=REG[g.reg], p=POV[g.reg], d=p[1]-p[0];
+  return `<h3>Région ${r.name}</h3><div style="color:#B8BEC4;font-size:11.5px;margin-bottom:4px">${r.govs.join(', ')}</div><table>
+  ${row('Taux de pauvreté 2021',`<b>${f1(p[1])} %</b>`)}${row('Taux de pauvreté 2015',f1(p[0])+' %')}
+  ${row('Évolution 2015 → 2021',(d>0?'+':d<0?'−':'')+f1(Math.abs(d))+' pts')}${row('Écart au national (16,6 %)',sg(p[1],16.6)+' pt')}
+  ${row('Dépense / pers. 2021',DEP21[g.reg]?`<b>${fmt(DEP21[g.reg])} DT</b> <span class="d">(national : 5 468)</span>`:'<span class="d">données non dispo</span>')}</table>
+  <div class="n" style="border-top:1px solid var(--line);padding-top:5px;margin-top:6px">Seuil de pauvreté 2021 : 2 536 DT de dépense de consommation par personne et par an (INS).</div>`;
+}
 function tipHTML(g){
   const M=MODES[mode];
+  if(mode==='lits'||mode==='lits1k')return tipTour(g);
+  if(mode==='pauv')return tipPauv(g);
   if(M.unit==='gov'){
     const arr=[...D.gov].sort((a,b)=>M.val(b)-M.val(a)), rk=arr.findIndex(x=>x===g)+1;
     return `<h3>Gouvernorat de ${g.name}</h3><table>
@@ -265,6 +339,11 @@ function paint(){
     return `<div style="display:grid;grid-template-columns:104px 1fr 78px;gap:6px;align-items:center;font-size:12px;margin:1px 0"><span>${i.n}</span><span style="background:#3E4347;border-radius:3px;height:9px"><i style="display:block;height:100%;width:${i.v/mx*100}%;background:${c};border-radius:3px;border:1px solid rgba(0,0,0,.12)"></i></span><span style="text-align:right;color:var(--muted)">${M.fmt(i.v)}</span></div>`}).join('');
 }
 Object.keys(MODES).forEach(k=>document.getElementById('m-'+k).onclick=()=>{mode=k;tip.style.opacity=0;paint()});
+const TS=[...D.gov].sort((a,b)=>TOUR[b.name][1]-TOUR[a.name][1]), T3=TS.slice(0,3), P1=[...D.gov].sort((a,b)=>per1k(b)-per1k(a));
+const TFACTS=[
+ `<b>Lits d'hôtel 2023 :</b> ${T3.map(g=>g.name).join(', ')} concentrent ${f1(T3.reduce((s,g)=>s+TOUR[g.name][1],0)/BEDS*100)} % des ${fmt(BEDS)} lits ; ${D.gov.filter(g=>TOUR[g.name][1]<1000).length} gouvernorats en ont moins de 1 000 (calcul à partir des chiffres de l'INS).`,
+ `<b>Lits pour 1 000 habitants :</b> ${f1(per1k(P1[0]))} à ${P1[0].name}, ${f1(per1k(P1[1]))} à ${P1[1].name}, contre ${f1(BEDS/POP*1000)} en moyenne nationale.`,
+ `<b>Pauvreté 2021 :</b> ${f1(POV.co[1])} % dans le Centre-Ouest contre ${f1(POV.gt[1])} % dans le Grand Tunis (régions de l'INS ; national : 16,6 %).`];
 // repères calculés
 const byC=[...D.gov].sort((a,b)=>b.chom-a.chom), byV=[...D.gov].sort((a,b)=>b.couv-a.couv);
 const gtp=D.reg.find(r=>r.id==='gt'), cop=D.reg.find(r=>r.id==='co');
@@ -272,12 +351,26 @@ document.getElementById('facts').innerHTML=[
  `<b>Chômage 2014 :</b> de ${f1(byC[23].chom)} % (${byC[23].name}) à ${f1(byC[0].chom)} % (${byC[0].name}) ; ${byC.slice(0,3).map(g=>g.name).join(', ')} dépassent 25 %.`,
  `<b>Couverture sociale 2024 :</b> de ${f1(byV[23].couv)} % (${byV[23].name}) à ${f1(byV[0].couv)} % (${byV[0].name}).`,
  `<b>PIB par habitant 2016 :</b> ${fmt(gtp.pc16)} DT dans le Grand Tunis contre ${fmt(cop.pc16)} DT dans le Centre-Ouest, soit ${f1(gtp.pc16/cop.pc16)} fois plus (calcul à partir des chiffres de l'INS).`
-].map(f=>`<li>${f}</li>`).join('');
+,...TFACTS].map(f=>`<li>${f}</li>`).join('');
 // tableaux
 document.getElementById('tbl').innerHTML='<tr><th>Gouvernorat</th><th>Région</th><th>Chômage 2014</th><th>Emploi 2014</th><th>Couverture sociale 2024</th></tr>'+
  [...D.gov].sort((a,b)=>a.name.localeCompare(b.name,'fr')).map(g=>`<tr><td>${g.name}</td><td>${REG[g.reg].name}</td><td>${f1(g.chom)} %</td><td>${f1(g.emp)} %</td><td>${f1(g.couv)} %</td></tr>`).join('');
 document.getElementById('tblreg').innerHTML='<tr><th>Région</th><th>PIB 2016 (M DT)</th><th>Part du PIB 2016</th><th>PIB/hab. 2013</th><th>PIB/hab. 2016</th><th>Agriculture 2016</th></tr>'+
  D.reg.map(r=>`<tr><td>${r.name}</td><td>${fmt(Math.round(r.gdp16))}</td><td>${f1(r.sh16)} %</td><td>${fmt(r.pc13)}</td><td>${fmt(r.pc16)}</td><td>${f1(r.va.agri)} %</td></tr>`).join('');
+const OCC=[["Djerba-Zarzis", 47.8, 53059], ["Mahdia", 46.4, 9961], ["Monastir-Skanès", 37.1, 20450], ["Yasmine Hammamet", 35.8, 19542], ["Tabarka-Aïn Draham", 32.5, 4721], ["Sousse", 29.9, 37270], ["Tunis-Côtes de Carthage", 24.9, 16127], ["Nabeul-Hammamet", 22.6, 41126], ["Sfax", 17.3, 4164], ["Bizerte-Béja", 15.9, 2691], ["Gafsa-Tozeur", 15.0, 5763], ["Kairouan", 14.9, 1003], ["Sbeitla-Kasserine", 13.6, 943], ["Kébili", 12.1, 4119], ["Tataouine", 10.5, 631], ["Gabès", 9.3, 1780], ["Tunis-Sud", 7.2, 5995], ["Le Kef", 4.0, 388]];
+function bars(id,items,max,col){document.getElementById(id).innerHTML=items.map(i=>i.sep?`<div class="tsep">${i.sep}</div>`:`<div class="trow" title="${i.t||''}"><span>${i.n}</span><span class="tb">${i.v==null?'':`<i style="width:${i.v/max*100}%;background:${i.c||col}"></i>`}</span><span class="tv">${i.v==null?'<em>'+i.x+'</em>':i.x}</span></div>`).join('')}
+const C1='#6BAA9C', C2='#E1A87A';
+bars('ch-pib',[{n:'2018',v:4.1,x:'4,1 %'},{n:'2019',v:4.5,x:'4,5 %'},{n:'2020',v:1.7,x:'1,7 %'},{n:'2021',v:2.0,x:'2,0 %'},{n:'2022',v:3.2,x:'3,2 %'},
+  {sep:'Nouvelle année de référence et nouvelle enquête sur les dépenses des visiteurs à partir de 2023 : comparaison prudente'},{n:'2023',v:5.0,x:'5,0 %',c:C2},{n:'2024',v:5.1,x:'5,1 %',c:C2}],6,C1);
+bars('ch-emp',[{n:'2018',v:137.2,x:'137,2'},{n:'2019',v:155.7,x:'155,7'},{n:'2020',v:74.7,x:'74,7'},{n:'2021',v:72.9,x:'72,9'},{n:'2022',v:106.7,x:'106,7'},
+  {n:'2023',v:null,x:'données non dispo'},{n:'2024',v:null,x:'données non dispo'}],170,C1);
+bars('ch-rec',[{n:'2019',v:6646.7,x:'6 647'},{n:'2020',v:2439.4,x:'2 439'},{n:'2021',v:2954.2,x:'2 954'},{n:'2022',v:5420.1,x:'5 420'},
+  {n:'2023 et après',v:null,x:'non actualisées'}],7000,C1);
+bars('ch-occ',OCC.map(o=>({n:o[0],v:o[1],x:f1(o[1])+' %',t:o[0]+' : '+f1(o[1])+' % d\'occupation, '+fmt(o[2])+' lits'})),50,C1);
+document.getElementById('tbltour').innerHTML='<tr><th>Gouvernorat</th><th>Hôtels 2023</th><th>Lits 2023</th><th>Lits 2014</th><th>Lits / 1 000 hab.</th></tr>'+
+ [...D.gov].sort((a,b)=>a.name.localeCompare(b.name,'fr')).map(g=>`<tr><td>${g.name}</td><td>${TOUR[g.name][0]}</td><td>${fmt(TOUR[g.name][1])}</td><td>${fmt(TOUR[g.name][2])}</td><td>${f1(per1k(g))}</td></tr>`).join('')+`<tr><th>Tunisie</th><th>${HOTELS}</th><th>${fmt(BEDS)}</th><th>${fmt(Object.values(TOUR).reduce((s,t)=>s+t[2],0))}</th><th>${f1(BEDS/POP*1000)}</th></tr>`;
+document.getElementById('tblpov').innerHTML='<tr><th>Région</th><th>Pauvreté 2015</th><th>Pauvreté 2021</th><th>Dépense par personne 2021</th></tr>'+
+ D.reg.map(r=>`<tr><td>${r.name}</td><td>${f1(POV[r.id][0])} %</td><td>${f1(POV[r.id][1])} %</td><td>${DEP21[r.id]?fmt(DEP21[r.id])+' DT':'données non dispo'}</td></tr>`).join('')+'<tr><th>Tunisie</th><th>15,2 %</th><th>16,6 %</th><th>5 468 DT</th></tr>';
 paint();
 </script>
 <footer class="tg-foot"><p>Cartes réalisées à partir de sources libres. Une erreur, une source à proposer ? <a href="mailto:benslimane.prof@gmail.com">benslimane.prof@gmail.com</a></p><p>Un projet de <a href="https://benslimaneprof.work" target="_blank" rel="noopener">Prof-EBS · benslimaneprof.work</a></p><p>Ce site est fait par <a href="https://lokaal.biz" target="_blank" rel="noopener">Lokaal</a></p></footer>
